@@ -1,5 +1,6 @@
 [
   {
-    "Iteration": "Normal"
+    "Description": "Calls DfGetHostBridgeSystemFabricID with valid inputs and confirms correct output",
+    "Iteration": "PositiveTest"
   }
 ]

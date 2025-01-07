@@ -17,11 +17,13 @@
 #include "BaseFabricTopologyCmn.h"
 #include "DfCmn2Rev.h"
 
+#define FABRIC_ID 4
+#define GET_DIE_SYSTEM_OFFSET_UT_RETURN_VALUE 4
 
 const AMD_FABRIC_TOPOLOGY_DIE_DEVICE_MAP *GetDeviceMapOnDieUt(
     void)
 {
-  static const DEVICE_IDS IDs = {1};
+  static const DEVICE_IDS IDs = {.FabricID = FABRIC_ID};
   static AMD_FABRIC_TOPOLOGY_DIE_DEVICE_MAP deviceMap = {
       .Type = Ios, ///< Type
       .Count = 1,  ///< Count
@@ -33,7 +35,7 @@ const AMD_FABRIC_TOPOLOGY_DIE_DEVICE_MAP *GetDeviceMapOnDieUt(
 uint32_t GetDieSystemOffsetUt(
     uint32_t Socket)
 {
-  return 1;
+  return GET_DIE_SYSTEM_OFFSET_UT_RETURN_VALUE;
 }
 
 HOST_DEBUG_SERVICE mHostDebugService = NULL;
@@ -53,8 +55,7 @@ DF_COMMON_2_REV_XFER_BLOCK DfCmn2RevXfer = {
     .DfGetPhysRootBridgeNumber = NULL,
     .DfFindComponentLocationMap = NULL,
     .DfBaseFabricTopologyConstructor = NULL,
-    .DfBuildDomainInfo = NULL
-    };
+    .DfBuildDomainInfo = NULL};
 
 AMD_UNIT_TEST_STATUS
 EFIAPI
@@ -77,11 +78,22 @@ void
           "%s (Iteration: %s) Test started.", TestName, IterationName);
 
   // Iteration name to be named
-  if (true)
+  if (strcmp(IterationName, "PositiveTest") == 0)
   {
+    // Arrange
     SIL_STATUS Status = SilPass;
     MockSilGetCommon2RevXferTableManyTimes(&DfCmn2RevXfer, Status, 2);
-    DfGetHostBridgeSystemFabricID(2, 4);
+
+    // Act
+    uint32_t result = DfGetHostBridgeSystemFabricID(0, 0);
+
+    // Assert
+    if (result != FABRIC_ID + GET_DIE_SYSTEM_OFFSET_UT_RETURN_VALUE)
+    {
+      Ut->Log(AMD_UNIT_TEST_LOG_ERROR, __FUNCTION__, __LINE__,
+              "Incorrect return value.");
+      UtSetTestStatus(Ut, AMD_UNIT_TEST_FAILED);
+    }
   }
   else
   {
@@ -89,8 +101,7 @@ void
             "Iteration '%s' is not implemented.", IterationName);
     UtSetTestStatus(Ut, AMD_UNIT_TEST_ABORTED);
   }
-
-  Ut->Log(AMD_UNIT_TEST_LOG_INFO, __FUNCTION__, __LINE__, "Test context is: %s.", (char *)Context);
+  
   UtSetTestStatus(Ut, AMD_UNIT_TEST_PASSED);
 
   Ut->Log(AMD_UNIT_TEST_LOG_INFO, __FUNCTION__, __LINE__,
