@@ -22,3 +22,5 @@
   AmdOpenSilPkg/opensil-uefi-interface/UnitTest/Source/xUSL/Fch/FchAb/FchInitEnvAbUt/FchInitEnvAbUt.inf
   AmdOpenSilPkg/opensil-uefi-interface/UnitTest/Source/xUSL/CCX/Common/UpdatApMtrrSettingsUt/UpdatApMtrrSettingsUt.inf
   AmdOpenSilPkg/opensil-uefi-interface/UnitTest/Source/xUSL/CCX/Common/CcxEnableSmeeUt/CcxEnableSmeeUt.inf
+  AmdOpenSilPkg/opensil-uefi-interface/UnitTest/Source/xUSL/DF/Common/DfGetHostBridgeSystemFabricIDUt/DfGetHostBridgeSystemFabricIDUt.inf
+  AmdOpenSilPkg/opensil-uefi-interface/UnitTest/Source/xUSL/DF/Common/DfGetSystemComponentRootBridgeLocationUt/DfGetSystemComponentRootBridgeLocationUt.inf
