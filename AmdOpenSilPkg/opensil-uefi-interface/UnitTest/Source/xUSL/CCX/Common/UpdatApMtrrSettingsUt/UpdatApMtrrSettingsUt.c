@@ -1,7 +1,7 @@
 /* Copyright (C) 2021 - 2024 Advanced Micro Devices, Inc. All rights reserved. */
 // SPDX-License-Identifier: MIT
 /**
- * @file ApupdateMtrrSettingsUt.c
+ * @file UpdatApMtrrSettingsUt.c
  * @brief
  *
  */
@@ -329,9 +329,6 @@ void
             "Iteration '%s' is not implemented.", IterationName);
     UtSetTestStatus(Ut, AMD_UNIT_TEST_ABORTED);
   }
-
-  Ut->Log(AMD_UNIT_TEST_LOG_INFO, __FUNCTION__, __LINE__, "Test context is: %s.", (char *)Context);
-  UtSetTestStatus(Ut, AMD_UNIT_TEST_PASSED);
 
   Ut->Log(AMD_UNIT_TEST_LOG_INFO, __FUNCTION__, __LINE__,
           "%s (Iteration: %s) Test ended.", TestName, IterationName);

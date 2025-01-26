@@ -68,11 +68,13 @@ void
   {
     bool SmeeEnable = true;
     CcxEnableSmee(SmeeEnable);
+    UtSetTestStatus(Ut, AMD_UNIT_TEST_PASSED);
   }
   else if (strcmp(IterationName, "SmeeEnableFalse") == 0)
   {
     bool SmeeEnable = false;
     CcxEnableSmee(SmeeEnable);
+    UtSetTestStatus(Ut, AMD_UNIT_TEST_PASSED);
   }
   else
   {
@@ -80,9 +82,6 @@ void
             "Iteration '%s' is not implemented.", IterationName);
     UtSetTestStatus(Ut, AMD_UNIT_TEST_ABORTED);
   }
-
-  Ut->Log(AMD_UNIT_TEST_LOG_INFO, __FUNCTION__, __LINE__, "Test context is: %s.", (char *)Context);
-  UtSetTestStatus(Ut, AMD_UNIT_TEST_PASSED);
 
   // if (strcmp (IterationName, "First") == 0) {
   //   Arrange
