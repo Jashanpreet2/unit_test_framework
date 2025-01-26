@@ -61,7 +61,50 @@
   },
   {
     "Component": "MPIO",
-    "Tests" : []
+    "Description": "Profile for xUSL Mpio components",
+    "Tests": [
+      {
+        "Name": "GetPortAncDataTypeSizeUt",
+        "ConfigFile": "AmdOpenSilPkg\\opensil-uefi-interface\\UnitTest\\Source\\xUSL\\Mpio\\Common\\GetPortAncDataTypeSizeUt\\GetPortAncDataTypeSizeUt.json",
+        "Iterations": ["NoOvrdPresent", "PhyOvrdPresent", "SpdOvrdPresent"],
+        "Target": "AmdOpenSilPkg\\opensil-uefi-interface\\OpenSIL\\xUSL\\Mpio\\Common\\MpioAncDataV1.c",
+        "Timeout": 15
+      },
+      {
+        "Name": "MpioAncDataCalcSizeUt",
+        "ConfigFile": "AmdOpenSilPkg\\opensil-uefi-interface\\UnitTest\\Source\\xUSL\\Mpio\\Common\\MpioAncDataCalcSizeUt\\MpioAncDataCalcSizeUt.json",
+        "Iterations": ["NoOvrdPresent", "PhyOvrdPresent", "SpdOvrdPresent"],
+        "Target": "AmdOpenSilPkg\\opensil-uefi-interface\\OpenSIL\\xUSL\\Mpio\\Common\\MpioAncDataV1.c",
+        "Timeout": 15
+      },
+      {
+        "Name": "AddPhyOvrdDataUt",
+        "ConfigFile": "AmdOpenSilPkg\\opensil-uefi-interface\\UnitTest\\Source\\xUSL\\Mpio\\Common\\AddPhyOvrdDataUt\\AddPhyOvrdDataUt.json",
+        "Iterations": ["HeaderAddrIsNull", "HeaderAddrIsNotNull"],
+        "Target": "AmdOpenSilPkg\\opensil-uefi-interface\\OpenSIL\\xUSL\\Mpio\\Common\\MpioAncDataV1.c",
+        "Timeout": 15
+      },
+      {
+        "Name": "AddSpdOvrdDataUt",
+        "ConfigFile": "AmdOpenSilPkg\\opensil-uefi-interface\\UnitTest\\Source\\xUSL\\Mpio\\Common\\AddSpdOvrdDataUt\\AddSpdOvrdDataUt.json",
+        "Iterations": ["HeaderAddrIsNull", "HeaderAddrIsNotNull"],
+        "Target": "AmdOpenSilPkg\\opensil-uefi-interface\\OpenSIL\\xUSL\\Mpio\\Common\\MpioAncDataV1.c",
+        "Timeout": 15
+      },
+      {
+        "Name": "AddAncListDataUt",
+        "ConfigFile": "AmdOpenSilPkg\\opensil-uefi-interface\\UnitTest\\Source\\xUSL\\Mpio\\Common\\AddAncListDataUt\\AddAncListDataUt.json",
+        "Iterations": ["PhyHeaderofsIsZero", "PhyHeaderofsIsNonZero"],
+        "Target": "AmdOpenSilPkg\\opensil-uefi-interface\\OpenSIL\\xUSL\\Mpio\\Common\\MpioAncDataV1.c",
+        "Timeout": 15
+      },
+      {
+        "Name": "MpioAddAncDataOverrideUt",
+        "ConfigFile": "AmdOpenSilPkg\\opensil-uefi-interface\\UnitTest\\Source\\xUSL\\Mpio\\Common\\MpioAddAncDataOverrideUt\\MpioAddAncDataOverrideUt.json",
+        "Iterations": ["Default"],
+        "Target": "AmdOpenSilPkg\\opensil-uefi-interface\\OpenSIL\\xUSL\\Mpio\\Common\\MpioAncDataV1.c",
+        "Timeout": 15
+      }]
   },
   {
     "Component": "RcMgr",
@@ -119,10 +162,17 @@
   {
     "Component": "DF",
     "Description": "Profile for xUSL DF components",
-    "Tests" : [
+    "Tests": [
       {
         "Name": "DfGetHostBridgeSystemFabricIDUt",
         "ConfigFile": "AmdOpenSilPkg\\opensil-uefi-interface\\UnitTest\\Source\\xUSL\\DF\\Common\\DfGetHostBridgeSystemFabricIDUt\\DfGetHostBridgeSystemFabricIDUt.json",
+        "Iterations": ["PositiveTest"],
+        "Target": "AmdOpenSilPkg\\opensil-uefi-interface\\OpenSIL\\xUSL\\DF\\Common\\BaseFabricTopologyCmn.c",
+        "Timeout": 15
+      },
+      {
+        "Name": "DfGetSystemComponentUt",
+        "ConfigFile": "AmdOpenSilPkg\\opensil-uefi-interface\\UnitTest\\Source\\xUSL\\DF\\Common\\DfGetSystemComponentUt\\DfGetSystemComponentUt.json",
         "Iterations": ["PositiveTest"],
         "Target": "AmdOpenSilPkg\\opensil-uefi-interface\\OpenSIL\\xUSL\\DF\\Common\\BaseFabricTopologyCmn.c",
         "Timeout": 15
