@@ -104,7 +104,22 @@
         "Iterations": ["Default"],
         "Target": "AmdOpenSilPkg\\opensil-uefi-interface\\OpenSIL\\xUSL\\Mpio\\Common\\MpioAncDataV1.c",
         "Timeout": 15
-      }]
+      },
+      {
+        "Name": "PcieAriInitUt",
+        "ConfigFile": "AmdOpenSilPkg\\opensil-uefi-interface\\UnitTest\\Source\\xUSL\\Mpio\\Common\\PcieAriInitUt\\PcieAriInitUt.json",
+        "Iterations": ["NbioApiFound", "NbioApiNotFound"],
+        "Target": "AmdOpenSilPkg\\opensil-uefi-interface\\OpenSIL\\xUSL\\Mpio\\Common\\MpioCfgPoints.c",
+        "Timeout": 15
+      },
+      {
+        "Name": "Usb4LaneNumberCfgCallbackUt",
+        "ConfigFile": "AmdOpenSilPkg\\opensil-uefi-interface\\UnitTest\\Source\\xUSL\\Mpio\\Common\\Usb4LaneNumberCfgCallbackUt\\Usb4LaneNumberCfgCallbackUt.json",
+        "Iterations": ["ReturnsSilUnsupported"],
+        "Target": "AmdOpenSilPkg\\opensil-uefi-interface\\OpenSIL\\xUSL\\Mpio\\Common\\MpioCfgPoints.c",
+        "Timeout": 15
+      }
+    ]
   },
   {
     "Component": "RcMgr",
