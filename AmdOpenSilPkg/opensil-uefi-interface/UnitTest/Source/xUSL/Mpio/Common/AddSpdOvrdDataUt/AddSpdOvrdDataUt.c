@@ -34,7 +34,7 @@ void
   Ut->Log(AMD_UNIT_TEST_LOG_INFO, __FUNCTION__, __LINE__,
           "%s (Iteration: %s) Test started.", TestName, IterationName);
 
-  if (strcmp(IterationName, "HeaderAddrIsNotNull"))
+  if (strcmp(IterationName, "HeaderAddrIsNotNull") == 0)
   {
     // Arrange
     uint8_t buffer[sizeof(ANC_SPD_OVRD_HEADER) + sizeof(ANC_SPD_OVRD_DATA)];
@@ -65,7 +65,7 @@ void
       UtSetTestStatus(Ut, AMD_UNIT_TEST_FAILED);
     }
   }
-  else if (strcmp(IterationName, "HeaderAddrIsNull"))
+  else if (strcmp(IterationName, "HeaderAddrIsNull") == 0)
   {
     // Arrange
     uint8_t buffer[sizeof(ANC_SPD_OVRD_HEADER) + sizeof(ANC_SPD_OVRD_DATA)];
