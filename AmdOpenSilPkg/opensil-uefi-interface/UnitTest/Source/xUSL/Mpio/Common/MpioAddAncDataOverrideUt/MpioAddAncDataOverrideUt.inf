@@ -9,7 +9,7 @@
 [Defines]
   INF_VERSION    = 0x00010005
   BASE_NAME      = MpioAddAncDataOverrideUt
-  FILE_GUID      = 72b21a90-4223-47de-962b-8effa5b0ce2f
+  FILE_GUID      = d9cb99cc-ff52-4894-bcf0-e37f58db4f54
   MODULE_TYPE    = HOST_APPLICATION
   VERSION_STRING = 1.0
 

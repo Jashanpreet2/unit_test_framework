@@ -9,7 +9,7 @@
 [Defines]
   INF_VERSION    = 0x00010005
   BASE_NAME      = AddSpdOvrdDataUt
-  FILE_GUID      = 72b21a90-4223-47de-962b-8effa5b0ce2f
+  FILE_GUID      = 2b01c027-842c-4aa1-aa32-bee8aaca7cd3
   MODULE_TYPE    = HOST_APPLICATION
   VERSION_STRING = 1.0
 

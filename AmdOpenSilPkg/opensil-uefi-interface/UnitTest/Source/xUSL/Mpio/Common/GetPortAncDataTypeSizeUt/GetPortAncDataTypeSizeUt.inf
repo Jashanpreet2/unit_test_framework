@@ -9,7 +9,7 @@
 [Defines]
   INF_VERSION    = 0x00010005
   BASE_NAME      = GetPortAncDataTypeSizeUt
-  FILE_GUID      = 72b21a90-4223-47de-962b-8effa5b0ce2f
+  FILE_GUID      = b460f0e7-fefe-46ac-8e05-29447bb2f0c5
   MODULE_TYPE    = HOST_APPLICATION
   VERSION_STRING = 1.0
 

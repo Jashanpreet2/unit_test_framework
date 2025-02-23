@@ -9,7 +9,7 @@
 [Defines]
   INF_VERSION    = 0x00010005
   BASE_NAME      = AddPhyOvrdDataUt
-  FILE_GUID      = 72b21a90-4223-47de-962b-8effa5b0ce2f
+  FILE_GUID      = f024e121-b89a-4d74-a03f-05ad0471a5bd
   MODULE_TYPE    = HOST_APPLICATION
   VERSION_STRING = 1.0
 
