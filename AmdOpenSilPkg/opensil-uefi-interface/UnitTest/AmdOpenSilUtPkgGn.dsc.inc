@@ -32,3 +32,5 @@
   AmdOpenSilPkg/opensil-uefi-interface/UnitTest/Source/xUSL/Mpio/Common/MpioAddAncDataOverrideUt/MpioAddAncDataOverrideUt.inf
   AmdOpenSilPkg/opensil-uefi-interface/UnitTest/Source/xUSL/Mpio/Common/PcieAriInitUt/PcieAriInitUt.inf
   AmdOpenSilPkg/opensil-uefi-interface/UnitTest/Source/xUSL/Mpio/Common/Usb4LaneNumberCfgCallbackUt/Usb4LaneNumberCfgCallbackUt.inf
+  AmdOpenSilPkg/opensil-uefi-interface/UnitTest/Source/xUSL/Mpio/Common/MpioCfgBeforeDxioInitUt/MpioCfgBeforeDxioInitUt.inf
+  AmdOpenSilPkg/opensil-uefi-interface/UnitTest/Source/xUSL/Mpio/Common/MpioCfgAfterDxioInitUt/MpioCfgAfterDxioInitUt.inf

@@ -118,6 +118,20 @@
         "Iterations": ["ReturnsSilUnsupported"],
         "Target": "AmdOpenSilPkg\\opensil-uefi-interface\\OpenSIL\\xUSL\\Mpio\\Common\\MpioCfgPoints.c",
         "Timeout": 15
+      },
+      {
+        "Name": "MpioCfgBeforeDxioInitUt",
+        "ConfigFile": "AmdOpenSilPkg\\opensil-uefi-interface\\UnitTest\\Source\\xUSL\\Mpio\\Common\\MpioCfgBeforeDxioInitUt\\MpioCfgBeforeDxioInitUt.json",
+        "Iterations": ["Default"],
+        "Target": "AmdOpenSilPkg\\opensil-uefi-interface\\OpenSIL\\xUSL\\Mpio\\Common\\MpioCfgPoints.c",
+        "Timeout": 15
+      },
+      {
+        "Name": "MpioCfgAfterDxioInitUt",
+        "ConfigFile": "AmdOpenSilPkg\\opensil-uefi-interface\\UnitTest\\Source\\xUSL\\Mpio\\Common\\MpioCfgBeforeDxioInitUt\\MpioCfAfterDxioInitUt.json",
+        "Iterations": ["Default", "NoXferTable", "NoIp2IpApi"],
+        "Target": "AmdOpenSilPkg\\opensil-uefi-interface\\OpenSIL\\xUSL\\Mpio\\Common\\MpioCfgPoints.c",
+        "Timeout": 15
       }
     ]
   },
